@@ -9,6 +9,11 @@ body {
   font-weight: 400;
   font-size: 10px;
   color: #1B1A17;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 img {
@@ -78,6 +83,10 @@ ul {
 }
 .no-scroll {
   overflow-y: hidden;
+}
+
+.no-click {
+  pointer-events: none;
 }
 
 header {
@@ -185,12 +194,12 @@ header {
   flex-direction: column;
   align-items: flex-end;
   top: 0;
-  right: -200px;
-  width: 200px;
+  right: -250px;
+  width: 250px;
   height: 100%;
   background-color: #FDFDFB;
   z-index: 2;
-  padding: 70px 30px 40px 30px;
+  padding: 100px 50px 40px 30px;
   box-sizing: border-box;
   transform-origin: 0% 0%;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -207,7 +216,7 @@ header {
   flex-direction: column;
   text-align: end;
   gap: 30px;
-  font-size: 2em;
+  font-size: 2.5em;
   text-transform: uppercase;
   margin: 0;
 }
@@ -223,7 +232,7 @@ header {
 }
 
 .action-item__mobile {
-  transform: scale(1.2);
+  transform: scale(1.5);
   margin: 0 auto;
 }
 
@@ -736,6 +745,9 @@ footer {
     padding: 10px;
     border: 1px solid #C4C0B6;
     border-radius: 10px;
+  }
+  .pop-models__watch-all:hover {
+    transform: translate(50%, 0);
   }
   .items {
     flex-direction: column;
