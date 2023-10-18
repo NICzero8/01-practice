@@ -41,15 +41,26 @@ h2 {
 }
 
 button {
-  background-color: transparent;
-  overflow: hidden;
-  cursor: pointer;
+  display: inline-block;
   border: none;
+  overflow: hidden;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
 }
 
-a {
+button:focus, button:active {
+  outline: none;
+}
+
+a, a:link, a:visited {
   text-decoration: none;
   color: unset;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 ul {
@@ -65,6 +76,10 @@ ul {
     display: block !important;
   }
 }
+.no-scroll {
+  overflow-y: hidden;
+}
+
 header {
   background-color: #FDFDFB;
 }
@@ -170,9 +185,9 @@ header {
   flex-direction: column;
   align-items: flex-end;
   top: 0;
-  right: -80%;
-  width: 80%;
-  height: 100vh;
+  right: -200px;
+  width: 200px;
+  height: 100%;
   background-color: #FDFDFB;
   z-index: 2;
   padding: 70px 30px 40px 30px;
@@ -676,6 +691,7 @@ footer {
   }
   .header-banner__image::before {
     bottom: 9px;
+    left: -36%;
   }
   .header-banner__line {
     width: 20px;
